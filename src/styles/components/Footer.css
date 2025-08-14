@@ -1,0 +1,20 @@
+footer {
+    margin-top: 30%;
+    background-color: #552583; /* morado Lakers */
+    color: #FDB927;            /* dorado Lakers */
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5); /* sombra hacia arriba */
+    font-weight: bold;
+}
+
+footer a {
+    color: #FDB927;  /* enlaces dorados */
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff; /* cambia a blanco al pasar el mouse */
+}

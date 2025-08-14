@@ -1,7 +1,60 @@
+/* Reset */
 *{
     margin: 0;
     padding: 0;
 }
-.blue{
-    background-color: aqua;
+
+/* Logo / imagen */
+img{
+    width: 100px;
+}
+
+/* Navegación */
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(85, 37, 131, 0.9);
+    box-shadow: 5px 5px 15px #FDB927;
+   
+}
+
+/* Lista de links */
+ul li{
+    list-style: none;
+    display: inline;
+    padding: 5px;
+}
+
+/* Links */
+a{
+    color: #FDB927;  
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover{
+    background-color: #FDB927; 
+    color:#552583 ; 
+}
+
+button {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffffff; /* morado Lakers */
+    color: #000000; /* dorado Lakers */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #FDB927; /* dorado Lakers */
+    color: #552583; /* morado Lakers */
+    transform: scale(1.05); /* efecto pequeño de aumento */
 }
