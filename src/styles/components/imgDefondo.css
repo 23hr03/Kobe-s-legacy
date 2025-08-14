@@ -1,0 +1,8 @@
+body {
+    background-image: url('/src/assets/dear\ basketball\ kobe\ bryant.jpg'); /* ruta de tu imagen */
+    background-size: cover;       /* la imagen cubre toda la pantalla */
+    background-position: center;  /* la centra */
+    background-repeat: no-repeat; /* no se repite */
+    height: 100vh;                /* asegura que el body tenga altura completa */
+    margin: 0;                    /* elimina márgenes por defecto */
+}
