@@ -1,8 +1,18 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-image: url('/src/assets/dear\ basketball\ kobe\ bryant.jpg'); /* ruta de tu imagen */
-    background-size: cover;       /* la imagen cubre toda la pantalla */
-    background-position: center;  /* la centra */
-    background-repeat: no-repeat; /* no se repite */
-    height: 100vh;                /* asegura que el body tenga altura completa */
-    margin: 0;                    /* elimina márgenes por defecto */
+  background-image: url('/src/assets/desktop-wallpaper-kobe-bryant-home-screen.jpg'); /* usa la ruta correcta */
+  background-position: center center; /* centrada */
+  background-repeat: no-repeat;      /* que no se repita */
+  background-size: contain;          /* que la imagen se vea completa */
+  background-attachment: fixed;      /* efecto fijo al scrollear */
+  background-color: black;           /* relleno donde no llegue la imagen */
+}
+header, footer {
+    z-index: 10; /* sobre la imagen */
+    position: relative;
 }

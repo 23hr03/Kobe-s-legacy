@@ -7,6 +7,10 @@ footer {
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5); /* sombra hacia arriba */
     font-weight: bold;
 }
+footer {
+    z-index: 10; /* sobre la imagen */
+    position: relative;
+}
 
 footer a {
     color: #FDB927;  /* enlaces dorados */
