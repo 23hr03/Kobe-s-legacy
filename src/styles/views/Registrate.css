@@ -12,11 +12,17 @@
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 10px;
+  color: gold;
+  margin-top: 50px;
+  margin-left: 150px;
 }
 
 .subtitulo {
   font-size: 1.2rem;
   margin-bottom: 20px;
+  color: gold;
+  margin-top: 50px;
+  margin-left: 150px;
 }
 
 .form-box {
@@ -48,7 +54,7 @@
   margin-top: 15px;
 }
 
-.btn-registrar {
+.form-box .btn-registrar {
   background-color: gold;
   color: purple;
   font-weight: bold;
@@ -58,7 +64,7 @@
   cursor: pointer;
 }
 
-.btn-volver {
+.form-box .btn-volver {
   background-color: white;
   color: purple;
   font-weight: bold;
