@@ -4,34 +4,36 @@ import "../styles/views/Login.css"
 const Login = () => {
     return (
         <Layout>
-            <h1>Inicia session</h1>
+            <h1 className="titulo">INICIA SESSION</h1>
+            <h2 className="subtitulo">ÚNETE AL LEGADO DE KOBE</h2>
+       
+            <div className="inicio-container">
+                <form className="form-box">
 
-            <section className="login">
-                <h2 > Bienvendo, el legado de kobe te espera </h2>
-                <form className="formulario">
-                    <div>
-                        <label>Nombre de usuario:</label>
-                        <input type="text" name="nombre" />
-                    </div>
-                    <div>
-                        <label>Correo electronico:</label>
-                        <input type="email" name="email" />
-                    </div>
-                    <div>
-                        <label>Contraseña:</label>
-                        <input type="password" name="password"/>
-                    </div>
+                    <label> CORREO ELECTRÓNICO:
+                        <input type="email" placeholder="ejemplo@email.com" />
+                    </label>  
+
+                    <label> NOMBRE DE USUARIO:
+                        <input type="text" placeholder="Tu usuario" />
+                    </label>
+
+                    <label> CONTRASEÑA:
+                        <input type="password" placeholder="Crea tu contraseña" />
+                    </label>
+
+
                     <div className="botones">
-                        <button className="enviar">Registrar</button>
-                        <button className="enviar">Iniciar session</button>
+                      <button className="btn-iniciar">Iniciar Session</button>
+                      <button className="btn-registrar">Registrate</button>
                     </div>
-                    
                 </form>
-            </section>
-
-            <main>
-                <p> Inicia session para que puedas difrutar de nuestra tienda online con los mejores productos de la NBA🏀</p>
-            </main>
+                <p className="texto-final">
+                  Forma parte de nuestra comunidad y disfruta de los mejores productos de
+                  la <span className="nba">NBA 🏀</span>
+                </p>
+            </div>
+          
         </Layout>
     )
 }
