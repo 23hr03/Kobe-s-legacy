@@ -88,3 +88,11 @@
   color: orange;
   font-weight: bold;
 }
+.texto-error{
+  color: red;
+  font-weight: bold;
+}
+.texto-exito{
+  color: green;
+  font-weight: bold;
+}
