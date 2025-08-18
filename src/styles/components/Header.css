@@ -1,65 +1,99 @@
-/* Reset */
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+
 header {
     z-index: 10; /* sobre la imagen */
     position: relative;
 }
 
-/* Logo / imagen */
-img{
+img {
     width: 100px;
     height: 150px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Navegación */
-nav{
+img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0px 0px 8px #FDB927);
+}
+
+nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color:#552583;
-    box-shadow: 5px 5px 15px #FDB927;
-   
+    background-color: #552583;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
 }
 
-/* Lista de links */
-ul li{
+
+ul {
+    display: flex;
+    gap: 15px;
+}
+
+ul li {
     list-style: none;
-    display: inline;
-    padding: 5px;
 }
 
-/* Links */
-a{
+
+a {
     color: #FDB927;  
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 5px;
-    padding: 20px;
+    padding: 12px 18px;
     font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-a:hover{
+/* Hover con efecto de resalte */
+a:hover {
     background-color: #FDB927; 
-    color:#552583 ; 
+    color: #552583; 
+    box-shadow: 0 4px 10px rgba(253, 185, 39, 0.4);
 }
 
+/* Línea animada debajo */
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 3px;
+    background: #FDB927;
+    transition: width 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* =====================
+   Botón
+===================== */
 button {
-    padding: 8px 15px;
-    border-radius: 5px;
+    padding: 8px 18px;
+    border-radius: 25px;
     border: none;
-    background-color: #ffffff; /* morado Lakers */
-    color: #000000; /* dorado Lakers */
+    background: #ffffff;
+    color: #000000;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: #FDB927; /* dorado Lakers */
-    color: #552583; /* morado Lakers */
-    transform: scale(1.05); /* efecto pequeño de aumento */
+    background: #FDB927;
+    color: #552583;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(253, 185, 39, 0.5);
 }

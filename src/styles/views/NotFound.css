@@ -1,0 +1,45 @@
+.notfound-card {
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 40px 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px rgba(128, 0, 128, 0.4);
+    text-align: center;
+  }
+  
+  .notfound-title {
+    font-size: 5rem;
+    font-weight: bold;
+    color: gold;
+    margin-bottom: 10px;
+  }
+  
+  .notfound-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: purple;
+  }
+  
+  .notfound-text {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    color: #333;
+  }
+  
+  .notfound-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: gold;
+    color: purple;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .notfound-button:hover {
+    background: purple;
+    color: gold;
+  }
+    
