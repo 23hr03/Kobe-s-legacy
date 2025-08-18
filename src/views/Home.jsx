@@ -25,17 +25,23 @@ const Home = () => {
          
             <section className="productos">
                 { 
-                    products.map((product) => 
+                    products.map((product) =>
                     <div key={product.id}>
                         <h2 >{product.title}</h2>
                         <img src={product.image} alt={`imagen de ${product.title}`} />
                         <p>${product.price}</p>
                         <p>{product.description}</p>
                         <p><strong>{product.category}</strong></p>
+                        <div className="botones"> 
+                            <button>Editar </button>
+                            <button>Borrar</button> 
+                        </div>
                         
                     </div>
+                    
                     )
                 }
+             
             </section>
         </Layout>
     )

@@ -1,13 +1,13 @@
 .title {
-  margin: 40px auto;
-  padding: 30px;
-  width: 80%;
-  text-align: center;
-  background: linear-gradient(135deg, rgba(85, 37, 130, 0.9), rgba(253, 185, 39, 0.9)); /* Colores Lakers */
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  animation: fadeIn 1s ease-in-out;
+    margin: 40px auto;
+    padding: 30px;
+    width: 80%;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(85, 37, 130, 0.9), rgba(253, 185, 39, 0.9)); /* Colores Lakers */
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .title h1 {
@@ -36,14 +36,12 @@
   }
 }
 
-
 .productos {
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
   gap: 20px;
   padding: 20px;
 }
-
 
 .productos div {
   background: #fff;
@@ -52,13 +50,15 @@
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .productos div:hover {
   transform: translateY(-5px);
   box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
 }
-
 
 .productos img {
   width: 100%;
@@ -68,13 +68,14 @@
   border-radius: 8px;
 }
 
-
 .productos h2 {
-  font-size: 1.2rem;
-  margin: 10px 0;
-  color: #333;
+  font-size: 1.1rem;
+  margin: 8px 0;
+  color: #222;
+  height: 50px; /* Mantener altura fija */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
 
 .productos p:nth-of-type(1) {
   font-size: 1.1rem;
@@ -83,11 +84,13 @@
   margin: 8px 0;
 }
 
-
 .productos p:nth-of-type(2) {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #555;
-  min-height: 40px;
+  min-height: 60px;
+  max-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-bottom: 10px;
 }
 
@@ -96,4 +99,69 @@
   margin-top: 8px;
   font-size: 0.85rem;
   color: #2980b9;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.botones button {
+  flex: 1;
+  max-width: 100px;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Botón Editar */
+.botones button:nth-child(1) {
+  background-color: #28a745; /* Verde */
+}
+
+.botones button:nth-child(1):hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Botón Borrar */
+.botones button:nth-child(2) {
+  background-color: #dc3545; /* Rojo */
+}
+
+.botones button:nth-child(2):hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive */
+@media (max-width: 1024px) {
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .productos {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .title h1 {
+    font-size: 1.6rem;
+  }
+
+  .title h2 {
+    font-size: 1.1rem;
+  }
 }
