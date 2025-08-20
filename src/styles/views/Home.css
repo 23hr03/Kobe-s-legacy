@@ -16,6 +16,7 @@
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  
 }
 
 .title h2 {
@@ -121,7 +122,7 @@
 }
 
 /* Botón Editar */
-.botones button:nth-child(1) {
+.botones .btn-edi:nth-child(1) {
   background-color: #28a745; /* Verde */
 }
 
@@ -135,7 +136,7 @@
   background-color: #dc3545; /* Rojo */
 }
 
-.botones button:nth-child(2):hover {
+.botones .btn-borrar:nth-child(2):hover {
   background-color: #c82333;
   transform: scale(1.05);
 }

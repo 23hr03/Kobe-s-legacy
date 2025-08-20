@@ -1,5 +1,6 @@
 import { useState} from "react";
 import { Layout } from "../components/Layout";
+import { useNavigate } from "react-router-dom";
 import "../styles/views/Registrate.css"
 
 const  Register = () => {
@@ -9,6 +10,12 @@ const  Register = () => {
     const [error, setError] = useState("")
     const [success, setSuccess] = useState("")
 
+    const navigate = useNavigate()
+    const handleBack = (e) =>{
+        e.preventDefault()
+        navigate("/login")
+        
+    }
     const handlSubmit = (e) =>{
         e.preventDefault()
         setError("")
@@ -57,9 +64,9 @@ const  Register = () => {
                     </label>
 
 
-                    <div className="botones">
+                    <div className="btns">
                       <button className="btn-registrar" >Crear cuenta</button>
-                      <button className="btn-volver">Volver al login</button>
+                      <button onClick={handleBack} className="btn-volver" >Volver al login</button>
                     </div>
                 </form>
                 {error && <span className="texto-error">{error}</span>}

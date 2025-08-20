@@ -15,6 +15,16 @@ const Home = () => {
         fetchingProducts()
     },[])
 
+    const handlDelete = async (id) =>{
+       const response = await fetch(`https://fakestoreapi.com/products/${id}`, {method: "DELETE"})
+        
+        console.log(response)
+
+        if(response.ok){
+           setProducts( prevProduct => prevProduct.filter((product) => product.id != id ))
+        }
+    }
+
 
     return (
         <Layout >
@@ -22,6 +32,7 @@ const Home = () => {
                 <h1>Bienvenido a nustra tienda virtual </h1>
                 <h2>Nuestros Productos</h2>
             </div>
+            
          
             <section className="productos">
                 { 
@@ -33,8 +44,8 @@ const Home = () => {
                         <p>{product.description}</p>
                         <p><strong>{product.category}</strong></p>
                         <div className="botones"> 
-                            <button>Editar </button>
-                            <button>Borrar</button> 
+                            <button className=".btn-edi">Editar </button>
+                            <button className=".btn-borrar" onClick={() => handlDelete(product.id)}>Borrar</button> 
                         </div>
                         
                     </div>

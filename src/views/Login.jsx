@@ -1,7 +1,15 @@
 import { Layout } from "../components/Layout";
+import { useNavigate } from "react-router-dom";
 import "../styles/views/Login.css"
 
 const Login = () => {
+
+    const navigate = useNavigate()
+
+    const handlRegister = (e) =>{
+        e.preventDefault()
+        navigate("/register")
+    }
     return (
         <Layout>
             <h1 className="titulo">INICIA SESSION</h1>
@@ -23,9 +31,9 @@ const Login = () => {
                     </label>
 
 
-                    <div className="botones">
+                    <div className="btns">
                       <button className="btn-iniciar">Iniciar Session</button>
-                      <button className="btn-registrar">Registrate</button>
+                      <button onClick={handlRegister} className="btn-regist">Registrate</button>
                     </div>
                 </form>
                 <p className="texto-final">
