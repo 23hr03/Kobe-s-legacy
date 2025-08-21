@@ -4,11 +4,20 @@ import "../styles/components/Header.css"
 
 const Header =()=> {
     const [user, setUser] = useState(false)
+    const [menuOpen, setMenuOpen] = useState(false);
     return (
         <header>
             <nav >
                 <img src="https://i.pinimg.com/originals/8f/e8/1f/8fe81f04f49b8b87ee24c43afb7f62ca.png" alt="logo" />
-                <ul>
+
+                <button 
+                  className="hamburger" 
+                  onClick={() => setMenuOpen(!menuOpen)}
+                >
+                    ☰
+                </button>
+
+                <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
 
                     {user && <>
                         <li><Link to="/Home">Inicio</Link></li>

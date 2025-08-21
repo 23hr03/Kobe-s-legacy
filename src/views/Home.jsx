@@ -3,6 +3,7 @@ import { Layout } from "../components/Layout";
 import "../styles/views/Home.css"
 
 const Home = () => {
+    const[user, setUser] = useState(true)
     const[ products, setProducts] = useState([])
     const fetchingProducts = async () =>{
         const response = await fetch("https://fakestoreapi.com/products", { method: "GET" })
@@ -22,6 +23,7 @@ const Home = () => {
 
         if(response.ok){
            setProducts( prevProduct => prevProduct.filter((product) => product.id != id ))
+        //    fetchingProducts()
         }
     }
 
@@ -43,10 +45,15 @@ const Home = () => {
                         <p>${product.price}</p>
                         <p>{product.description}</p>
                         <p><strong>{product.category}</strong></p>
+
+                      { user && <>
                         <div className="botones"> 
-                            <button className=".btn-edi">Editar </button>
-                            <button className=".btn-borrar" onClick={() => handlDelete(product.id)}>Borrar</button> 
+                            <button className="btn-edi">Editar </button>
+                            <button className="btn-borrar" onClick={() => handlDelete(product.id)}>Borrar</button> 
                         </div>
+                      </>
+                      }
+                        
                         
                     </div>
                     

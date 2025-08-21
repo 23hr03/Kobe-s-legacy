@@ -7,7 +7,7 @@
 
 
 header {
-    z-index: 10; /* sobre la imagen */
+    z-index: 10; 
     position: relative;
 }
 
@@ -97,3 +97,52 @@ button:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(253, 185, 39, 0.5);
 }
+
+/* Botón hamburguesa */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #FDB927;
+    cursor: pointer;
+    z-index: 1001; /* siempre por encima del menú */
+    
+}
+  /* Navegación normal */
+  .nav-links {
+    display: flex;
+    gap: 20px; /* espacio entre ítems en pantallas grandes */
+    list-style: none;
+    align-items: center;
+    
+}
+  /* --- Responsive --- */
+ @media (max-width: 768px) {
+   .hamburger {
+     display: block;
+   }
+ 
+   .nav-links {
+     display: none;  /* se oculta por defecto en mobile */
+     flex-direction: column;
+     gap: 25px; /* separación entre enlaces */
+     position: absolute;
+     top: 70px;
+     right: 20px;
+     background: #552583;
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+     min-width: 180px; /* para que no quede todo pegado */
+     text-align: right;
+   }
+ 
+   .nav-links.open {
+    margin-top: 50px;
+    margin-right: 50px;
+     display: flex; /* aparece cuando activás el estado */
+   }
+ 
+}
+ 
