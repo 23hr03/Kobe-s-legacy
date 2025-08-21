@@ -89,10 +89,16 @@
   font-weight: bold;
 }
 .texto-error{
+  margin-top: 30px;
+  background-color: gold;
+  width: 35%;
   color: red;
   font-weight: bold;
 }
 .texto-exito{
+  margin-top: 30px;
+  background-color: gold;
+  width: 35%;
   color: green;
   font-weight: bold;
 }
