@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Layout } from "../components/Layout";
 import "../styles/views/Home.css"
+import logo from "../assets/logo.jpg"
 
 const Home = () => {
     const[user, setUser] = useState(true)
@@ -62,42 +63,75 @@ const Home = () => {
 
             { showPopup && (
                 <section className="edit-product">
-                  <h2>Editando producto...</h2>
-                  <button onClick={() => { setProdutEdit(null); setShowpopup(false) }}>Cerrar</button>
+                    <button 
+                      className="close-btn" 
+                      onClick={() => { setProdutEdit(null); setShowpopup(false) }}
+                    >
+                      ✖
+                    </button>
+                
+                    <h2>Editando producto...</h2>
+                    <div className="logo-container">
+                        <img src={logo} alt="Logo" className="logo-edit" />
+                    </div>
+                
+                    <div className="edit-product-content">
+                      {/* Tarjeta de preview */}
+                      { produtEdit && (
+                        <div className="product-preview">
+                          <img src={produtEdit.image} alt={produtEdit.title} />
+                          <div>
+                            <h3>{produtEdit.title}</h3>
+                            <p><strong>${produtEdit.price}</strong></p>
+                            <p>{produtEdit.category}</p>
+                          </div>
+                        </div>
+                      )}
                     
-                    <form onSubmit={(e) => { e.preventDefault(); handlUpdate(); }}>
+
+                      {/* Formulario */}
+                      <form className="edit-form" onSubmit={(e) => { e.preventDefault(); handlUpdate(); }}>
                         <input 
                           type="text" 
                           placeholder="Title" 
                           value={titleEdit} 
                           onChange={(e) => setTitleEdit(e.target.value)} 
                         />
+
                         <input 
                           type="number" 
                           placeholder="Price" 
                           value={priceEdit} 
                           onChange={(e) => setPriceEdit(e.target.value)} 
                         />
+
                         <textarea 
                           placeholder="Descripcion" 
                           value={descriptionEdit} 
                           onChange={(e) => setDescriptionEdit(e.target.value)} 
                         />
+
                         <input 
                           type="text" 
                           placeholder="Category" 
                           value={categoryEdit} 
                           onChange={(e) => setCategoryEdit(e.target.value)} 
                         />
+
                         <input 
                           type="text" 
                           placeholder="Imagen" 
                           value={imageEdit} 
                           onChange={(e) => setImageEdit(e.target.value)} 
                         />    
+
                         <button type="submit">Actualizar</button>                    
-                    </form>
-                </section>
+                      </form>
+                    </div>
+              </section>
+              
+                
+                
                 )}
             
             
