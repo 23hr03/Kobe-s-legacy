@@ -49,9 +49,37 @@ const Home = () => {
 
 
 
-    const handlUpdate = async () =>{
+    const handlUpdate = async (e) =>{
+
+        e.preventDefault()
+        const updateProduct={
+            title: titleEdit,
+            price: Number(priceEdit),
+            description: descriptionEdit,
+            category: categoryEdit,
+            image: imageEdit
+        }
+
+        const response = await fetch(`https://fakestoreapi.com/products/${produtEdit.id}`,{ 
+            method:"PUT",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(updateProduct)
+        })
+
+        if(response.ok){
+            const data = await response.json()
+            setProducts(prevProduct => prevProduct.map((product) => 
+            product.id === produtEdit.id 
+            ? data: 
+            product
+            ))
+        }
+
+        setProdutEdit(null);
+        setShowpopup(false);
 
     }
+
 
 
     return (
@@ -83,6 +111,7 @@ const Home = () => {
                           <div>
                             <h3>{produtEdit.title}</h3>
                             <p><strong>${produtEdit.price}</strong></p>
+                            <p>{descriptionEdit.description}</p>
                             <p>{produtEdit.category}</p>
                           </div>
                         </div>
@@ -90,7 +119,7 @@ const Home = () => {
                     
 
                       {/* Formulario */}
-                      <form className="edit-form" onSubmit={(e) => { e.preventDefault(); handlUpdate(); }}>
+                      <form className="edit-form" onSubmit={handlUpdate}>
                         <input 
                           type="text" 
                           placeholder="Title" 
