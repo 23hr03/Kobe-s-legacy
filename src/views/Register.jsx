@@ -48,11 +48,19 @@ const  Register = () => {
                 <form className="form-box" onSubmit={handlSubmit}>
                     
                     <label> NOMBRE DE USUARIO:
-                        <input type="text" placeholder="Tu usuario" onChange={(e) => setUSername(e.target.value)} value={username}/>
+                        <input 
+                            type="text" 
+                            placeholder="Tu usuario" 
+                            onChange={(e) => setUSername(e.target.value)} 
+                            value={username}/>
                     </label>
 
                     <label> CORREO ELECTRÓNICO: 
-                        <input type="email" placeholder="ejemplo@email.com" onChange={(e) => setEmail(e.target.value)} value={email}/>
+                        <input 
+                            type="email" 
+                            placeholder="ejemplo@email.com" 
+                            onChange={(e) => setEmail(e.target.value)} 
+                            value={email}/>
                     </label> 
 
                     <label> CONTRASEÑA:
@@ -60,13 +68,17 @@ const  Register = () => {
                     </label>
 
                     <label>CONFIRMAR CONTRASEÑA:
-                        <input type="password" placeholder="Repite tu contraseña" onChange={(e) => setPassword(e.target.value)} value={password}/>
+                        <input 
+                            type="password" 
+                            placeholder="Repite tu contraseña" 
+                            onChange={(e) => setPassword(e.target.value)} 
+                            value={password}/>
                     </label>
 
 
                     <div className="btns">
                       <button className="btn-registrar" >Crear cuenta</button>
-                      <button onClick={handleBack} className="btn-volver" >Volver al login</button>
+                      <button type="button" onClick={handleBack} className="btn-volver" >Volver al login</button>
                     </div>
                 </form>
                 {error && <span className="texto-error">{error}</span>}
