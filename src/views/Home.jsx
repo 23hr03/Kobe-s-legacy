@@ -2,17 +2,21 @@ import { useEffect, useState } from "react";
 import { Layout } from "../components/Layout";
 import "../styles/views/Home.css"
 import logo from "../assets/logo.jpg"
+import { useAuth } from "../context/UserContext";
 
 const Home = () => {
-    const[user, setUser] = useState(true)
-    const[products, setProducts] = useState([])
-    const[produtEdit, setProdutEdit] = useState(null)
-    const[showPopup, setShowpopup] = useState(null)
-    const [titleEdit, setTitleEdit] = useState("");
-    const [priceEdit, setPriceEdit] = useState("");
-    const [descriptionEdit, setDescriptionEdit] = useState("");
-    const [categoryEdit, setCategoryEdit] = useState("");
-    const [imageEdit, setImageEdit] = useState("");
+  const[products, setProducts] = useState([])
+  const[produtEdit, setProdutEdit] = useState(null)
+  const[showPopup, setShowpopup] = useState(null)
+  const [titleEdit, setTitleEdit] = useState("");
+  const [priceEdit, setPriceEdit] = useState("");
+  const [descriptionEdit, setDescriptionEdit] = useState("");
+  const [categoryEdit, setCategoryEdit] = useState("");
+  const [imageEdit, setImageEdit] = useState("");
+  
+    // similando el estado del usuario pronto forma global
+  const { user } = useAuth()
+
 
     const fetchingProducts = async () =>{
         const response = await fetch("https://fakestoreapi.com/products", { method: "GET" })

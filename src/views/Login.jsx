@@ -1,9 +1,17 @@
 import { Layout } from "../components/Layout";
 import { useNavigate } from "react-router-dom";
 import "../styles/views/Login.css"
+import { useAuth } from "../context/UserContext";
 
 const Login = () => {
 
+    const {login} = useAuth()
+
+    const  handlLogin=(e) => {
+        e.preventDefault()
+        login()
+        navigate("/home")
+    }
     const navigate = useNavigate()
 
     const handlRegister = (e) =>{
@@ -16,15 +24,15 @@ const Login = () => {
             <h2 className="subtitulo">ÚNETE AL LEGADO DE KOBE</h2>
        
             <div className="inicio-container">
-                <form className="form-box">
+                <form onSubmit={handlLogin} className="form-box">
 
                     <label> CORREO ELECTRÓNICO:
                         <input type="email" placeholder="ejemplo@email.com" />
                     </label>  
 
-                    <label> NOMBRE DE USUARIO:
+                    {/* <label> NOMBRE DE USUARIO:
                         <input type="text" placeholder="Tu usuario" />
-                    </label>
+                    </label> */}
 
                     <label> CONTRASEÑA:
                         <input type="password" placeholder="Crea tu contraseña" />

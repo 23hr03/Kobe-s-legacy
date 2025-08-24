@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
 import "../styles/components/Header.css"
+import { useAuth } from "../context/UserContext"
 
 const Header =()=> {
-    const [user, setUser] = useState(false)
+    const { user } = useAuth()
     const [menuOpen, setMenuOpen] = useState(false);
     return (
         <header>
