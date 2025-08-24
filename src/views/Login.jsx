@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const Login = () => {
 
-    const [username, setUSername] = useState("");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("")
     
@@ -44,7 +44,7 @@ const Login = () => {
 
                     <label> USERNAME:
                         <input 
-                            onChange={(e) => setUSername(e.target.value)}
+                            onChange={(e) => setUsername(e.target.value)}
                             type="text" 
                             placeholder="Ingresa tu nombre de usuario" 
                             value={username}/>

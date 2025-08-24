@@ -2,10 +2,18 @@ import { Link } from "react-router-dom"
 import { useState } from "react"
 import "../styles/components/Header.css"
 import { useAuth } from "../context/UserContext"
+import { useNavigate } from "react-router-dom"
 
 const Header =()=> {
-    const { user } = useAuth()
+    const { user, logout } = useAuth()
     const [menuOpen, setMenuOpen] = useState(false);
+    const navigate = useNavigate()
+
+    const handleLogout = () =>{
+        logout()
+        navigate("/login")
+    }
+
     return (
         <header>
             <nav >
@@ -23,7 +31,7 @@ const Header =()=> {
                     {user && <>
                         <li><Link to="/Home">Inicio</Link></li>
                         <li><Link to="/dashboard">Dashboard</Link></li>
-                        <button>Cerrar sesion</button>
+                        <button onClick={handleLogout}>Cerrar sesion</button>
                         </>
                     }
 
