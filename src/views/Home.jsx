@@ -98,7 +98,7 @@ const Home = () => {
                       ✖
                     </button>
                 
-                    <h2>Editando producto...</h2>
+                    <h2 className="title-edit">Editando producto...</h2>
                     <div className="logo-container">
                         <img src={logo} alt="Logo" className="logo-edit" />
                     </div>

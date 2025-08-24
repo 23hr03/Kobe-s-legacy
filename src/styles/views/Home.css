@@ -212,10 +212,27 @@
   gap: 25px;
 }
 
+.title-edit {
+  text-transform: uppercase;
+  text-decoration: underline ;
+  text-decoration-thickness: 5px; /* grosor del subrayado */
+  text-decoration-color: black; /* color inicial */
+  animation: underlineColor 3s infinite linear;
+}
+
+@keyframes underlineColor {
+  0%   { text-decoration-color: black; }
+  25%  { text-decoration-color: orange; }
+  50%  { text-decoration-color: purple; }
+  75%  { text-decoration-color: gold; }
+  100% { text-decoration-color: palegreen; }
+}
+
 /* Preview del producto */
 .product-preview {
   flex: 1;
-  background: #fafafa;
+  background-color: #222;
+  color: gold;
   border-radius: 10px;
   padding: 15px;
   text-align: center;
@@ -262,6 +279,7 @@
 
 .edit-product button[type="submit"]:hover {
   background: green;
+  color: gold;
 }
 
 .logo-container {
