@@ -10,11 +10,11 @@ const RouterApp = () => {
     return(
         <BrowserRouter>
         <Routes>
-            <Route path="/" element ={<Login/>}  />
+            <Route path="/login" element ={<Login /> }  />
             <Route path="/home" element = {<Home/>}/>
             <Route path="/dashboard" element = {<PrivateRoute><Dashboard/></PrivateRoute>}/>
             <Route path="/register" element = {<Register/>}/>
-            <Route path="*" element = {<NotFound/>}/>
+            <Route path="*" element = {<PrivateRoute><NotFound/></PrivateRoute>}/>
         </Routes>
         </BrowserRouter>
     )
