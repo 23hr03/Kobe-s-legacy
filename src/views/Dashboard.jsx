@@ -82,18 +82,20 @@ const Dashboard = () => {
                 </div> 
 
               </form>
-              <section className="new-product">
+          
               {
-                    product && <div>
-                      <h2>{product.title}</h2>
-                      <img src={product.image} alt={`imagen de ${product.title}`}/>
-                      <p><strong>${product.price}</strong></p>
-                      <p>{product.category}</p>
-                      <p>{product.description}</p>
-                    </div>
-                  }   
+                product &&  <section className="new-product">
+                      <div>
+                        <h2>{product.title}</h2>
+                        <img src={product.image} alt={`imagen de ${product.title}`}/>
+                        <p><strong>${product.price}</strong></p>
+                        <p>{product.category}</p>
+                        <p>{product.description}</p>
+                      </div>
+                      </section>
+                    }   
 
-              </section>
+              
               {
 
               error && <p className="texto-error">{error}</p>
