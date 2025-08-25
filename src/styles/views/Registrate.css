@@ -102,3 +102,49 @@
   color: green;
   font-weight: bold;
 }
+/* Tablets */
+@media (max-width: 1024px) {
+  .registro-container {
+    margin-left: 0;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .form-box {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .titulo, .subtitulo {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .texto-error,
+  .texto-exito {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  .titulo {
+    font-size: 1.8rem;
+  }
+
+  .subtitulo {
+    font-size: 1rem;
+  }
+
+  .form-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .texto-error,
+  .texto-exito {
+    width: 90%;
+    font-size: 0.85rem;
+  }
+}

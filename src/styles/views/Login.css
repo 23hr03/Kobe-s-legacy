@@ -93,3 +93,43 @@
   color: orange;
   font-weight: bold;
 }
+/* Tablets */
+@media (max-width: 1024px) {
+  .inicio-container {
+    margin-left: 0;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .form-box {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .titulo, .subtitulo {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  .titulo {
+    font-size: 1.8rem;
+  }
+
+  .subtitulo {
+    font-size: 1rem;
+  }
+
+  .form-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .texto-final {
+    margin-right: 0;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}

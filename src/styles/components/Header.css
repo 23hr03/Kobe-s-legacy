@@ -25,7 +25,7 @@ img:hover {
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: #552583;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
@@ -61,7 +61,7 @@ nav {
   /* Estilos del botón */
   .busqueda button {
     border: none;
-    background-color: purple;
+    background-color: #552583;
     color: white;
     padding: 6px 10px;
     border-radius: 20px;
@@ -185,13 +185,22 @@ button:hover {
      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
      min-width: 180px; /* para que no quede todo pegado */
      text-align: right;
+     opacity: 0;
+     transform: translateY(-10px);
+     transition: all 0.3s ease;
    }
- 
-   .nav-links.open {
-    margin-top: 50px;
-    margin-right: 50px;
-     display: flex; /* aparece cuando activás el estado */
-   }
+  
+  .nav-links.open {
+    opacity: 1;
+    transform: translateY(0);
+  }
  
 }
+@media screen and (max-width: 600px) {
+  .busqueda {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
  

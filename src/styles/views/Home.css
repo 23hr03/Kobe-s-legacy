@@ -225,7 +225,7 @@
   25%  { text-decoration-color: orange; }
   50%  { text-decoration-color: purple; }
   75%  { text-decoration-color: gold; }
-  100% { text-decoration-color: palegreen; }
+  100% { text-decoration-color: #28a745; }
 }
 
 /* Preview del producto */
@@ -293,3 +293,33 @@
   opacity: 0.9;
 }
 
+/* Tablets */
+@media (max-width: 1024px) {
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .title {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  .productos {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .title h1 {
+    font-size: 1.6rem;
+  }
+
+  .title h2 {
+    font-size: 1rem;
+  }
+}

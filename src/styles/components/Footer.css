@@ -21,3 +21,39 @@ footer a {
 footer a:hover {
     color: #ffffff; /* cambia a blanco al pasar el mouse */
 }
+@media (max-width: 768px) {
+    footer {
+      padding: 15px 10px;
+      font-size: 0.9rem;
+    }
+  
+    footer a {
+      margin: 0 6px;
+      font-size: 0.9rem;
+    }
+  
+    /* Logo */
+    img {
+      width: 80px;
+      height: 120px;
+    }
+  }
+  
+  /* Móviles (≤ 480px) */
+  @media (max-width: 480px) {
+    footer {
+      font-size: 0.8rem;
+      padding: 12px 8px;
+    }
+  
+    footer a {
+      margin: 0 5px;
+      font-size: 0.8rem;
+    }
+  
+    /* Logo */
+    img {
+      width: 70px;
+      height: 100px;
+    }
+  }

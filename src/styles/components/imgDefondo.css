@@ -17,3 +17,18 @@ header, footer {
     z-index: 10; /* sobre la imagen */
     position: relative;
 }
+/* Tablets (≤ 768px) */
+@media (max-width: 768px) {
+  body {
+    background-size: cover; /* ✅ ocupa toda la pantalla */
+    background-attachment: scroll; /* mejor rendimiento en móviles */
+  }
+}
+
+/* Móviles (≤ 480px) */
+@media (max-width: 480px) {
+  body {
+    background-size: cover; 
+    background-position: top center; /* centra mejor en pantallas verticales */
+  }
+}
