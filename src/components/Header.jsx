@@ -5,7 +5,7 @@ import { useAuth } from "../context/UserContext"
 import { useNavigate } from "react-router-dom"
 
 const Header =()=> {
-    const { user, logout } = useAuth()
+    const { user, logout, setSearchTerm } = useAuth()
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate()
 
@@ -13,11 +13,22 @@ const Header =()=> {
         logout()
         navigate("/login")
     }
+    const handleInputChange = (e) => {
+        setSearchTerm(e.target.value)
+    }
 
     return (
         <header>
             <nav >
                 <img src="https://i.pinimg.com/originals/8f/e8/1f/8fe81f04f49b8b87ee24c43afb7f62ca.png" alt="logo" />
+
+                <label className="busqueda">
+                    <input
+                        placeholder="Busqueda de productos..."
+                        type="search"
+                        onChange={handleInputChange} />
+                    <button>🔍</button>
+                </label>
 
                 <button 
                   className="hamburger" 

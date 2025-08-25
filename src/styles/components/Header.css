@@ -31,6 +31,55 @@ nav {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     padding: 10px 20px;
 }
+/* Contenedor del input y botón */
+.busqueda {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #f1f1f1;
+    border-radius: 25px;
+    padding: 5px 10px;
+    width: 250px; /* ancho inicial */
+    transition: width 0.3s ease;
+  }
+  
+  /* Cuando haces focus en el input, el contenedor se expande */
+  .busqueda input:focus {
+    outline: none;
+    width: 100%;
+  }
+  
+  /* Estilos del input */
+  .busqueda input {
+    border: none;
+    background: transparent;
+    padding: 5px 10px;
+    flex: 1; /* ocupa todo el espacio disponible */
+    font-size: 14px;
+  }
+  
+  /* Estilos del botón */
+  .busqueda button {
+    border: none;
+    background-color: purple;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .busqueda button:hover {
+    background-color: gold;
+  }
+  
+  /* Responsivo: en pantallas pequeñas, ocupa más ancho */
+  @media screen and (max-width: 600px) {
+    .busqueda {
+      width: 180px;
+    }
+  }
+  
 
 
 ul {

@@ -6,6 +6,7 @@ const UserContext = createContext()
 const UserProvider = (props) =>{
     
     const [user, setUser] = useState(null)
+    const [searchTerm, setSearchTerm] = useState('');
 
     const login = async (username, password) =>{
 
@@ -26,7 +27,7 @@ const UserProvider = (props) =>{
     }
 
     return(
-        <UserContext.Provider value={{ login, logout, user }}>
+        <UserContext.Provider value={{ login, logout, user, searchTerm,setSearchTerm }}>
             {props.children}
 
         </UserContext.Provider>

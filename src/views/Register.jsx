@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "../styles/views/Registrate.css"
 
 const  Register = () => {
-    const [username, setUSername] = useState("")
+    const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
     const [password,setPassword] = useState("")
     const [error, setError] = useState("")
@@ -32,7 +32,7 @@ const  Register = () => {
         console.log(nweUser)
         setSuccess("Usuario registrado con exito...✔")
 
-        setUSername("")
+        setUsername("")
         setEmail("")
         setPassword("")
     }
@@ -51,7 +51,7 @@ const  Register = () => {
                         <input 
                             type="text" 
                             placeholder="Tu usuario" 
-                            onChange={(e) => setUSername(e.target.value)} 
+                            onChange={(e) => setUsername(e.target.value)} 
                             value={username}/>
                     </label>
 
@@ -63,14 +63,10 @@ const  Register = () => {
                             value={email}/>
                     </label> 
 
-                    <label> CONTRASEÑA:
-                        <input type="password" placeholder="Crea tu contraseña" />
-                    </label>
-
-                    <label>CONFIRMAR CONTRASEÑA:
+                    <label>CONTRASEÑA:
                         <input 
                             type="password" 
-                            placeholder="Repite tu contraseña" 
+                            placeholder="Contraseña" 
                             onChange={(e) => setPassword(e.target.value)} 
                             value={password}/>
                     </label>

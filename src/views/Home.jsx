@@ -13,11 +13,13 @@ const Home = () => {
   const [descriptionEdit, setDescriptionEdit] = useState("");
   const [categoryEdit, setCategoryEdit] = useState("");
   const [imageEdit, setImageEdit] = useState("");
+
+  
   
     // similando el estado del usuario pronto forma global
-  const { user } = useAuth()
+    const { user, searchTerm } = useAuth();
 
-
+    
     const fetchingProducts = async () =>{
         const response = await fetch("https://fakestoreapi.com/products", { method: "GET" })
         const data = await response.json()
@@ -83,8 +85,10 @@ const Home = () => {
         setShowpopup(false);
 
     }
-
-
+    const filteredProducts = products.filter(product => 
+      product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product.category.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
     return (
         <Layout >
@@ -173,26 +177,23 @@ const Home = () => {
              
                 { 
                 
-                    products.map((product) =>
-                    <div key={product.id}>
-                        <h2 >{product.title}</h2>
-                        <img src={product.image} alt={`imagen de ${product.title}`} />
-                        <p>${product.price}</p>
-                        <p>{product.description}</p>
-                        <p><strong>{product.category}</strong></p>
+                  filteredProducts.map((product) =>
+                      <div key={product.id}>
+                      <h2 >{product.title}</h2>
+                      <img src={product.image} alt={`imagen de ${product.title}`} />
+                      <p>${product.price}</p>
+                      <p>{product.description}</p>
+                      <p><strong>{product.category}</strong></p>
 
-                      { user && <>
-                        <div className="botones"> 
-                            <button className="btn-edi" onClick={() => handdlOPenedit(product)}>Editar </button>
-                            <button className="btn-borrar" onClick={() => handlDelete(product.id)}>Borrar</button> 
-                        </div>
-                      </>
-                      }
-                        
-                        
-                    </div>
-                    
-                    )
+                    { user && <>
+                      <div className="botones"> 
+                          <button className="btn-edi" onClick={() => handdlOPenedit(product)}>Editar </button>
+                          <button className="btn-borrar" onClick={() => handlDelete(product.id)}>Borrar</button> 
+                      </div>
+                    </>
+                    }
+                  </div>
+                )
                 }
                 
              
