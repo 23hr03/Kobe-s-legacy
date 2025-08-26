@@ -4,7 +4,6 @@
 Kobe Store - Simulación de autenticación y registro de usuarios
 
 ---
-##      ATENCION:  PROFE NO SUPE COMO HACER CON LAS RUTAS Y LA PAGINA HABRE EN EL NOUTFOUND, APARTE EN GITHUB AL REFRESCAR LA PAGINA SALTA UN ERROR NO SE POR QUE, LO DEJE ASI TODO FUNCIONA PERFECTO SI NAVEGAS CON LOS BOTONES
 
 ## 🎯 Objetivo general
 Desarrollar una aplicación web en **React** que permita simular el registro e inicio de sesión de usuarios utilizando la **FakeStoreAPI**, implementando un flujo básico de autenticación y navegación.
@@ -48,6 +47,8 @@ Desarrollar una aplicación web en **React** que permita simular el registro e i
    ```bash
    git clone https://github.com/23hr03/Kobe-s-legacy.git
    cd kobe-store
+## link de la pagina subida al github https://23hr03.github.io/Kobe-s-legacy/
+## por ahora tienen unos errore que no se como solucionar, el menu de hamburguesa desde que le coloque el search me dejo de funcionar entregare y seguire tratando de acomodarlo y por ultimo la pagina empieza en registar pero no se por que razon al darle de nuevo al boton de registar sale notfound  404 del resto todo esta bien
 
 ## 📌 Conclusión
 ## Este proyecto permite comprender cómo funcionan los flujos básicos de autenticación en aplicaciones web modernas, simulando un backend real a través de FakeStoreAPI.
