@@ -4,6 +4,7 @@
 Kobe Store - Simulación de autenticación y registro de usuarios
 
 ---
+##      ATENCION:  PROFE NO SUPE COMO HACER CON LAS RUTAS Y LA PAGINA HABRE EN EL NOUTFOUND, APARTE EN GITHUB AL REFRESCAR LA PAGINA SALTA UN ERROR NO SE POR QUE, LO DEJE ASI TODO FUNCIONA PERFECTO SI NAVEGAS CON LOS BOTONES
 
 ## 🎯 Objetivo general
 Desarrollar una aplicación web en **React** que permita simular el registro e inicio de sesión de usuarios utilizando la **FakeStoreAPI**, implementando un flujo básico de autenticación y navegación.
