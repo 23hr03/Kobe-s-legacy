@@ -32,3 +32,87 @@ header, footer {
     background-position: top center; /* centra mejor en pantallas verticales */
   }
 }
+/* ===========================
+   ESTILOS RESPONSIVOS
+=========================== */
+
+/* Pantallas menores a 1024px (tablets y celulares grandes) */
+@media (max-width: 1024px) {
+  .form-container {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .notfound-card {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .busqueda {
+    width: 200px;
+  }
+}
+
+/* Pantallas menores a 768px (tablets verticales y móviles medianos) */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .notfound-card {
+    width: 90%;
+    padding: 15px;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 15px 5px;
+  }
+}
+
+/* Pantallas menores a 480px (celulares pequeños) */
+@media (max-width: 480px) {
+  .form-container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .form-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-container input,
+  .form-container button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .notfound-card {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .notfound-title {
+    font-size: 3rem;
+  }
+
+  .notfound-subtitle {
+    font-size: 1.2rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  footer a {
+    display: inline-block;
+    margin: 5px;
+  }
+}
