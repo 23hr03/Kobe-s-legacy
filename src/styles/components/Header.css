@@ -172,7 +172,6 @@ button:hover {
       display: block;
     }
   
-    /* Menú móvil */
     .nav-links {
       flex-direction: column;
       gap: 25px;
@@ -186,36 +185,17 @@ button:hover {
       min-width: 180px;
       text-align: right;
   
-      /* Cambios importantes */
-      visibility: hidden;
+      visibility: hidden;  /* antes era display: none */
       opacity: 0;
       transform: translateY(-20px);
       transition: all 0.3s ease;
       z-index: 1000;
     }
   
-    /* Menú abierto */
     .nav-links.open {
       visibility: visible;
       opacity: 1;
       transform: translateY(0);
     }
-  
-    /* Opcional: overlay detrás del menú */
-    header::after {
-      content: "";
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.4);
-      z-index: 900;
-      transition: all 0.3s ease;
-    }
-  
-    header.menu-open::after {
-      display: block;
-    }
   }
+  

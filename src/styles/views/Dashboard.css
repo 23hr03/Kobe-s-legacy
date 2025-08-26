@@ -133,41 +133,81 @@ div .texto-error{
   font-weight: bold;
 }
 
-/* Tablets */
+/* ===========================
+   RESPONSIVE DASHBOARD
+=========================== */
+
+/* Tablets y pantallas medianas */
 @media (max-width: 1024px) {
-  .container {
-    grid-template-columns: 1fr; /* formulario arriba, tarjeta abajo */
-    gap: 40px;
-    justify-content: center;
+  .productos-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 20px;
   }
 
-  form {
-    margin: 0 auto;
-    margin-top: 40px;
-    width: 80%;
-  }
-
-  .new-product {
-    margin: 0 auto;
-    width: 80%;
-    margin-top: 40px;
+  .busqueda {
+    width: 200px;
   }
 }
 
-/* Móviles */
-@media (max-width: 600px) {
-  h1 {
-    margin-left: 0;
-    text-align: center;
-    font-size: 1.8rem;
+/* Celulares medianos */
+@media (max-width: 768px) {
+  .productos-container {
+    grid-template-columns: 1fr; /* 1 sola columna */
+    gap: 15px;
   }
 
-  form {
-    width: 90%;
-    margin-left: 0;
+  .producto-card {
+    max-width: 90%;
+    margin: 0 auto;
   }
 
-  .new-product {
-    width: 90%;
+  .busqueda {
+    width: 180px;
+  }
+
+  .busqueda input {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .busqueda button {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+}
+
+/* Celulares chicos */
+@media (max-width: 480px) {
+  .productos-container {
+    grid-template-columns: 1fr; /* todas las cards en una sola columna */
+    gap: 10px;
+  }
+
+  .producto-card {
+    max-width: 100%;
+    padding: 12px;
+  }
+
+  .producto-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .producto-card p {
+    font-size: 0.9rem;
+  }
+
+  .busqueda {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .busqueda input {
+    width: 70%;
+    font-size: 0.85rem;
+  }
+
+  .busqueda button {
+    padding: 5px 8px;
+    font-size: 0.9rem;
   }
 }
