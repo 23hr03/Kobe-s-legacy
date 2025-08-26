@@ -15,6 +15,7 @@
   color: gold;
   margin-top: 50px;
   margin-left: 150px;
+  
 }
 
 .subtitulo {
@@ -112,18 +113,46 @@
 
   .form-box {
     margin: 0 auto;
-    width: 80%;
+    width: 40%;
   }
 
   .titulo, .subtitulo {
     margin-left: 0;
     text-align: center;
+    background-color: black;
   }
 
   .texto-error,
   .texto-exito {
     width: 80%;
     text-align: center;
+    background-color: black;
+  }
+}
+
+@media (max-width: 800px) {
+  .registro-container {
+    margin-left: 0;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .form-box {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .titulo, .subtitulo {
+    margin-left: 0;
+    text-align: center;
+    background-color: black;
+  }
+
+  .texto-error,
+  .texto-exito {
+    width: 80%;
+    text-align: center;
+    background-color: black;
   }
 }
 
@@ -131,14 +160,17 @@
 @media (max-width: 600px) {
   .titulo {
     font-size: 1.8rem;
+    color: gold;
+    background-color: black;
   }
 
   .subtitulo {
     font-size: 1rem;
+    background-color: black;
   }
 
   .form-box {
-    width: 90%;
+    width: 70%;
     padding: 20px;
   }
 
@@ -146,5 +178,9 @@
   .texto-exito {
     width: 90%;
     font-size: 0.85rem;
+    background-color: black;
+  }
+  .form-box input{
+    width: 100%;
   }
 }
