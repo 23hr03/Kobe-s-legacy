@@ -214,7 +214,7 @@ border-radius: 10px;
 padding: 15px;
 text-align: center;
 box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-min-width: 0; /* Evita que se desborde */
+
 }
 
 .product-preview img {
@@ -243,6 +243,7 @@ border-radius: 6px;
 border: 1px solid #ccc;
 font-size: 14px;
 width: 100%;
+box-sizing: border-box;
 }
 
 .edit-product button[type="submit"] {
@@ -273,46 +274,87 @@ opacity: 0.9;
 }
 
 
-/* Tablets (hasta 1024px) */
 @media (max-width: 1024px) {
-.productos {
-  grid-template-columns: repeat(1, 1fr);
+  .edit-product-content {
+    flex-direction: column; /* Apila en columna */
+  }
+  .product-preview {
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+  .product-preview img {
+    max-width: 120px;
+  }
+  .edit-product form {
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+  .edit-product input,
+  .edit-product textarea {
+    font-size: 13px;
+  }
 }
-.title {
-  width: 90%;
-  padding: 20px;
-}
-}
+
+/* Móviles (hasta 768px) */
 @media (max-width: 768px) {
-.edit-product form {
-  padding: 10px;
-}
-.edit-product input,
-.edit-product textarea {
-  font-size: 13px;
-}
+  .product-preview {
+    padding: 10px;
+  }
+  .product-preview img {
+    max-width: 120px;
+  }
+  .edit-product form {
+    padding: 10px;
+  }
+  .edit-product input,
+  .edit-product textarea {
+    font-size: 13px;
+  }
 }
 
 /* Móviles (hasta 600px) */
 @media (max-width: 600px) {
-.edit-product form {
-  padding: 8px;
-}
-.edit-product input,
-.edit-product textarea {
-  font-size: 12px;
-  padding: 8px;
-}
+  .edit-product {
+    width: 90%;
+    padding: 20px;
+  }
+  .edit-product-content {
+    flex-direction: column;
+  }
+  .product-preview {
+    padding: 8px;
+  }
+  .product-preview img {
+    max-width: 100px;
+  }
+  .edit-product form {
+    padding: 8px;
+  }
+  .edit-product input,
+  .edit-product textarea {
+    font-size: 12px;
+    padding: 8px;
+  }
 }
 
 /* Móviles (hasta 480px) */
 @media (max-width: 480px) {
-.edit-product form {
-  padding: 8px;
-}
-.edit-product input,
-.edit-product textarea {
-  font-size: 12px;
-  padding: 8px;
-}
+  .edit-product {
+    width: 95%;
+    padding: 15px;
+  }
+  .product-preview {
+    padding: 8px;
+  }
+  .product-preview img {
+    max-width: 100px;
+  }
+  .edit-product form {
+    padding: 8px;
+  }
+  .edit-product input,
+  .edit-product textarea {
+    font-size: 12px;
+    padding: 8px;
+  }
 }
