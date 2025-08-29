@@ -56,7 +56,6 @@ header, footer {
 /* Pantallas menores a 768px (tablets verticales y móviles medianos) */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
     gap: 15px;
   }
 

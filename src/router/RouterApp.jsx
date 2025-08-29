@@ -9,6 +9,7 @@ import { NotFound } from "../views/NotFound";
 const RouterApp = () => (
   <HashRouter>
     <Routes>
+      <Route path="/" element={<Register />} />
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
       <Route path="/home" element={<Home />} />
