@@ -282,22 +282,40 @@ opacity: 0.9;
   .title {
   width: 100%;
   }
+  .edit-form{
+    margin-right: 100px;
+  }
   .title h1 {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     font-weight: bold;
     margin-right: 20px;
     text-transform: uppercase;
     margin-right: 100px;
     margin-left: 100px;
-
-
     }
-
     .title h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 400;
     opacity: 0.9;
     }
+    .edit-product-content {
+      flex-direction: column; /* Apila en columna */
+    }
+    .product-preview {
+      flex: 1 1 100%;
+      padding: 10px;
+    }
+    .product-preview img {
+      max-width: 120px;
+    }
+    .edit-product form {
+      flex: 1 1 100%;
+    }
+    .edit-product input,
+    .edit-product textarea {
+      font-size: 13px;
+    }
+  
 }
 @media (max-width: 768px) {
   .edit-product form {
@@ -377,8 +395,6 @@ opacity: 0.9;
     text-transform: uppercase;
     margin-right: 100px;
     margin-left: 100px;
-
-
     }
 
     .title h2 {
