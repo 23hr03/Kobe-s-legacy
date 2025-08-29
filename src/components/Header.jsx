@@ -34,35 +34,44 @@ const Header = () => {
           <button>🔍</button>
         </label>
         <button
+          type="button"
           className="hamburger"
-          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Abrir menú"
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((v) => !v)}
         >
           ☰
         </button>
-        <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-          {user && (
-            <>
-              <li>
-                <Link to="/Home" onClick={() => setMenuOpen(false)}>Inicio</Link>
-              </li>
-              <li>
-                <Link to="/dashboard" onClick={() => setMenuOpen(false)}>Dashboard</Link>
-              </li>
-              <button onClick={() => { handleLogout(); setMenuOpen(false); }}>Cerrar sesión</button>
-            </>
-          )}
-          {!user && (
-            <>
-              <li>
-                <Link to="/login" onClick={() => setMenuOpen(false)}>Login</Link>
-              </li>
-              <li>
-                <Link to="/register" onClick={() => setMenuOpen(false)}>Registrate</Link>
-              </li>
-            </>
-          )}
+        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+            {user ? (
+              <>
+                <li>
+                  <Link to="/Home" onClick={() => setMenuOpen(false)}>Inicio</Link>
+                </li>
+                <li>
+                  <Link to="/dashboard" onClick={() => setMenuOpen(false)}>Dashboard</Link>
+                </li>
+                <li>
+                  <button type="button" onClick={handleLogout}>Cerrar sesión</button>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <Link to="/login" onClick={() => setMenuOpen(false)}>Login</Link>
+                </li>
+                <li>
+                  <Link to="/register" onClick={() => setMenuOpen(false)}>Registrate</Link>
+                </li>
+              </>
+            )}
         </ul>
       </nav>
+
+      <div
+        className={`backdrop ${menuOpen ? "show" : ""}`}
+        onClick={() => setMenuOpen(false)}
+      />
     </header>
   );
 };
