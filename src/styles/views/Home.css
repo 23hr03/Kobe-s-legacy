@@ -279,41 +279,111 @@ opacity: 0.9;
 .productos {
   grid-template-columns: repeat(1, 1fr);
 }
-.title {
-  width: 90%;
-  padding: 20px;
-}
+  .title {
+  width: 100%;
+  }
+  .title h1 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-right: 20px;
+    text-transform: uppercase;
+    margin-right: 100px;
+    margin-left: 100px;
+
+
+    }
+
+    .title h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    opacity: 0.9;
+    }
 }
 @media (max-width: 768px) {
-.edit-product form {
-  padding: 10px;
-}
-.edit-product input,
-.edit-product textarea {
-  font-size: 13px;
-}
+  .edit-product form {
+    padding: 10px;
+  }
+  .edit-product input,
+  .edit-product textarea {
+    font-size: 13px;
+  }
+  .title h1 {
+    font-size: 1.0rem;
+    font-weight: bold;
+    margin-right: 20px;
+    text-transform: uppercase;
+    margin-right: 100px;
+    margin-left: 100px;
+
+
+    }
+
+    .title h2 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    opacity: 0.9;
+    }
+
 }
 
 /* Móviles (hasta 600px) */
 @media (max-width: 600px) {
-.edit-product form {
-  padding: 8px;
-}
-.edit-product input,
-.edit-product textarea {
-  font-size: 12px;
-  padding: 8px;
-}
+  .edit-product form {
+    padding: 8px;
+  }
+  .edit-product input,
+  .edit-product textarea {
+    font-size: 12px;
+    padding: 8px;
+  }
+  .title {
+    width: 100%;
+    }
+  .title h1 {
+    font-size: 1.0rem;
+    font-weight: bold;
+    margin-right: 20px;
+    text-transform: uppercase;
+    margin-right: 100px;
+    margin-left: 100px;
+
+
+    }
+
+    .title h2 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    opacity: 0.9;
+    }
 }
 
 /* Móviles (hasta 480px) */
 @media (max-width: 480px) {
-.edit-product form {
-  padding: 8px;
-}
-.edit-product input,
-.edit-product textarea {
-  font-size: 12px;
-  padding: 8px;
-}
+  .edit-product form {
+    padding: 8px;
+  }
+  .edit-product input,
+  .edit-product textarea {
+    font-size: 12px;
+    padding: 8px;
+  }
+  .title {
+    width: 100%;
+    }
+  .title h1 {
+    font-size: 1.0rem;
+    font-weight: bold;
+    margin-right: 20px;
+    text-transform: uppercase;
+    margin-right: 100px;
+    margin-left: 100px;
+
+
+    }
+
+    .title h2 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    opacity: 0.9;
+    }
 }
