@@ -25,6 +25,7 @@ const Header = () => {
           src="https://i.pinimg.com/originals/8f/e8/1f/8fe81f04f49b8b87ee24c43afb7f62ca.png"
           alt="logo"
         />
+
         <label className="busqueda">
           <input
             placeholder="Búsqueda de productos..."
@@ -33,6 +34,8 @@ const Header = () => {
           />
           <button>🔍</button>
         </label>
+
+        {/* Botón hamburguesa */}
         <button
           type="button"
           className="hamburger"
@@ -42,32 +45,45 @@ const Header = () => {
         >
           ☰
         </button>
+
+        {/* Links de navegación */}
         <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-            {user ? (
-              <>
-                <li>
-                  <Link to="/Home" onClick={() => setMenuOpen(false)}>Inicio</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard" onClick={() => setMenuOpen(false)}>Dashboard</Link>
-                </li>
-                <li>
-                  <button type="button" onClick={handleLogout}>Cerrar sesión</button>
-                </li>
-              </>
-            ) : (
-              <>
-                <li>
-                  <Link to="/login" onClick={() => setMenuOpen(false)}>Login</Link>
-                </li>
-                <li>
-                  <Link to="/register" onClick={() => setMenuOpen(false)}>Registrate</Link>
-                </li>
-              </>
-            )}
+          {user ? (
+            <>
+              <li>
+                <Link to="/Home" onClick={() => setMenuOpen(false)}>
+                  Inicio
+                </Link>
+              </li>
+              <li>
+                <Link to="/dashboard" onClick={() => setMenuOpen(false)}>
+                  Dashboard
+                </Link>
+              </li>
+              <li>
+                <button type="button" onClick={handleLogout}>
+                  Cerrar sesión
+                </button>
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <Link to="/login" onClick={() => setMenuOpen(false)}>
+                  Login
+                </Link>
+              </li>
+              <li>
+                <Link to="/register" onClick={() => setMenuOpen(false)}>
+                  Registrate
+                </Link>
+              </li>
+            </>
+          )}
         </ul>
       </nav>
 
+      {/* Fondo oscuro detrás del menú */}
       <div
         className={`backdrop ${menuOpen ? "show" : ""}`}
         onClick={() => setMenuOpen(false)}
