@@ -48,7 +48,7 @@ Desarrollar una aplicación web en **React** que permita simular el registro e i
    git clone https://github.com/23hr03/Kobe-s-legacy.git
    cd kobe-store
 ## link de la pagina subida al github https://23hr03.github.io/Kobe-s-legacy/
-## por ahora tienen unos errore que no se como solucionar, el menu de hamburguesa desde que le coloque el search me dejo de funcionar entregare y seguire tratando de acomodarlo y por ultimo la pagina empieza en registar pero no se por que razon al darle de nuevo al boton de registar sale notfound  404 del resto todo esta bien
+
 
 ## 📌 Conclusión
 ## Este proyecto permite comprender cómo funcionan los flujos básicos de autenticación en aplicaciones web modernas, simulando un backend real a través de FakeStoreAPI.
